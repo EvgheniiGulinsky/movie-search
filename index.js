@@ -9,7 +9,7 @@ function request(url){
     if (data.Response=="False"){
       alert(data.Error)
       searchForm.value  = ""
-      request('http://www.omdbapi.com/?apikey=107b2873&s=dream')
+      request('https://www.omdbapi.com/?apikey=107b2873&s=dream')
     }
     console.log(data);
     document.querySelector(".slides").innerHTML=""
@@ -20,7 +20,7 @@ function request(url){
 
 
 
-request('http://www.omdbapi.com/?apikey=107b2873&s=dream')
+request('https://www.omdbapi.com/?apikey=107b2873&s=dream')
 
 
 
@@ -69,7 +69,7 @@ function search(){
     sliderDestroy ()
     let query = searchForm.value
     spinner.style.display="inline-block"
-    request(`http://www.omdbapi.com/?apikey=107b2873&s=${query}`)
+    request(`https://www.omdbapi.com/?apikey=107b2873&s=${query}`)
 }
 
 

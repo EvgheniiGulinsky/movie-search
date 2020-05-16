@@ -41,7 +41,7 @@ if (event.target.classList.contains("slick-disabled")){
   event.preventDefault()
 console.log(event.target)
 let currentQuery = document.querySelector(".form-control").value
-fetch(`http://www.omdbapi.com/?apikey=107b2873&s=${currentQuery}&page=${currentPage}`)
+fetch(`https://www.omdbapi.com/?apikey=107b2873&s=${currentQuery}&page=${currentPage}`)
 .then((response) => {
   return response.json();
 })
