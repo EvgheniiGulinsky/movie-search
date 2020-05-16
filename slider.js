@@ -38,9 +38,11 @@ let currentPage = 2
 
 function sliderAdd (event){
 if (event.target.classList.contains("slick-disabled")){
-  event.preventDefault()
+event.preventDefault()
 console.log(event.target)
 let currentQuery = document.querySelector(".form-control").value
+if(currentQuery=="")
+currentQuery = "dream"
 fetch(`https://www.omdbapi.com/?apikey=107b2873&s=${currentQuery}&page=${currentPage}`)
 .then((response) => {
   return response.json();
