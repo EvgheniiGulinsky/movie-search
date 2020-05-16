@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header"><h1>Movie search</h1></header>
+    <div class="container">
+        <div class="search">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search movie" aria-label="Search movie" aria-describedby="button-addon2" autofocus>
+                <div class="input-group-append">
+                        <input type="button" class="input__clear" value="X">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search<div class="spinner-border spinner-border-sm ml-2" id="spinner" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div></button>
+                </div>
+            </div>
+        </div>
+        <div class="slider">
+
+            <div class="slides .multiple-items">
+                
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container footer__container">
+            <a href="https://rs.school/" target="_blank" id="School__link"> RS School 2020q1 
+            </a>
+            <a class="gitlink" href="https://github.com/EvgheniiGulinsky" target="_blank"><img src="./assets/GitHub-Mark/GitHub-Mark/PNG/GitHub-Mark-Light-32px.png" alt="" srcset=""> My github page
+            </a>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./slick-1.8.1/slick-1.8.1/slick/slick.min.js"></script>
+    <script type="module" src="index.js"></script>
+</body>
+</html>

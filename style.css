@@ -1,0 +1,67 @@
+.header{
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
+}
+.footer{
+    background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
+    position: fixed;
+    bottom: 0px;
+    width: 100%
+}
+.container{
+    overflow: hidden;
+}
+.search{
+    margin-top: 15px;
+}
+.footer__container{
+    display: flex;
+}
+.gitlink{
+    margin-left: auto;
+}
+.spinner-border{
+    display:none
+}
+a{
+    color: white;
+}
+a:hover{
+    color: white !important;
+}
+#School__link{
+    margin: auto 0px;
+}
+
+.slider{
+    margin-top: 11%;
+}
+
+.slides{
+    display: flex;
+    margin-bottom: 15px;
+}
+.movie{
+    text-align: center;
+    margin-right: 10px;
+}
+.movie__name{
+    overflow: hidden;
+	line-height: 20px;
+    height: 40px;
+    display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+}
+.movie img{
+    height: 330px;
+}
+
+.input__clear{
+  font-weight: bold;
+}
+
+
+

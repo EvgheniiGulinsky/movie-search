@@ -1,0 +1,80 @@
+
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search</title>
+    <script src="./Movie Search_files/jquery-3.5.1.js.Без названия" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./Movie Search_files/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./Movie Search_files/slick.css">
+    <link rel="stylesheet" href="./Movie Search_files/style.css">
+</head>
+<body>
+    <header class="header"><h1>Movie search</h1></header>
+    <div class="container">
+        <div class="search">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search movie" aria-label="Search movie" aria-describedby="button-addon2" autofocus="">
+                <div class="input-group-append">
+                        <input type="button" class="input__clear" value="X">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search<div class="spinner-border spinner-border-sm ml-2" id="spinner" role="status" style="display: none;">
+                        <span class="sr-only">Loading...</span>
+                      </div></button>
+                </div>
+            </div>
+        </div>
+        <div class="slider">
+
+            <div class="slides .multiple-items slick-initialized slick-slider"><button class="slick-prev slick-arrow slick-disabled" aria-label="Previous" type="button" aria-disabled="true" style="">Previous</button><div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 2440px; transform: translate3d(0px, 0px, 0px);"><div class="movie item slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" style="width: 234px;"><h5 class="movie__name">Requiem for a Dream</h5><img src="./Movie Search_files/MV5BOTdiNzJlOWUtNWMwNS00NmFlLWI0YTEtZmI3YjIzZWUyY2Y3XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"><div class="movie__year">2000</div></div><div class="movie item slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="0" style="width: 234px;"><h5 class="movie__name">A Nightmare on Elm Street 3: Dream Warriors</h5><img src="./Movie Search_files/MV5BMjFkYTEwNjAtYWU1YS00NTMyLTkwYmUtZjEyMjZjMDg5Njc5XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"><div class="movie__year">1987</div></div><div class="movie item slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="0" style="width: 234px;"><h5 class="movie__name">Dream House</h5><img src="./Movie Search_files/MV5BMTM5MzUxMDc5Ml5BMl5BanBnXkFtZTcwMTMwMjIwNg@@._V1_SX300.jpg"><div class="movie__year">2011</div></div><div class="movie item slick-slide slick-active" data-slick-index="3" aria-hidden="false" tabindex="0" style="width: 234px;"><h5 class="movie__name">Goal! The Dream Begins</h5><img src="./Movie Search_files/MV5BMjAxNDk2Njk1OV5BMl5BanBnXkFtZTcwOTE5MzIzMQ@@._V1_SX300.jpg"><div class="movie__year">2005</div></div><div class="movie item slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" style="width: 234px;"><h5 class="movie__name">Cassandra's Dream</h5><img src="./Movie Search_files/MV5BMTI1NDg1NTY2N15BMl5BanBnXkFtZTcwNDY2MTU1MQ@@._V1_SX300.jpg"><div class="movie__year">2007</div></div><div class="movie item slick-slide" data-slick-index="5" aria-hidden="true" tabindex="-1" style="width: 234px;"><h5 class="movie__name">A Nightmare on Elm Street 4: The Dream Master</h5><img src="./Movie Search_files/MV5BN2IwODlmN2ItOGU5NC00ZTBhLWJhZjItMTdkOTI1NTU4YzdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"><div class="movie__year">1988</div></div><div class="movie item slick-slide" data-slick-index="6" aria-hidden="true" tabindex="-1" style="width: 234px;"><h5 class="movie__name">Arizona Dream</h5><img src="./Movie Search_files/MV5BNjViZTgwMGUtNTJkNS00Mjg1LTkwZWQtNTg1YWEyOWFhY2I0XkEyXkFqcGdeQXVyNDQ2MTMzODA@._V1_SX300.jpg"><div class="movie__year">1993</div></div><div class="movie item slick-slide" data-slick-index="7" aria-hidden="true" tabindex="-1" style="width: 234px;"><h5 class="movie__name">A Nightmare on Elm Street: The Dream Child</h5><img src="./Movie Search_files/MV5BZmMzNzc1ZTItMDJiOS00Y2UxLWEzZmEtMzBiNGNkYzNiNDBkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"><div class="movie__year">1989</div></div><div class="movie item slick-slide" data-slick-index="8" aria-hidden="true" tabindex="-1" style="width: 234px;"><h5 class="movie__name">Goal II: Living the Dream</h5><img src="./Movie Search_files/MV5BMTIxNzI5NjAxNl5BMl5BanBnXkFtZTcwNzI2NTQ0MQ@@._V1_SX300.jpg"><div class="movie__year">2007</div></div><div class="movie item slick-slide" data-slick-index="9" aria-hidden="true" tabindex="-1" style="width: 234px;"><h5 class="movie__name">A Midsummer Night's Dream</h5><img src="./Movie Search_files/MV5BZjI5YzcxZmUtMWUzOC00MGJmLWFjODgtYTlhNTViNjFmYzE5XkEyXkFqcGdeQXVyMTY2MzYyNzA@._V1_SX300.jpg"><div class="movie__year">1999</div></div></div></div><button class="slick-next slick-arrow" aria-label="Next" type="button" style="" aria-disabled="false">Next</button></div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container footer__container">
+            <a href="https://rs.school/" target="_blank" id="School__link"> RS School 2020q1 
+            </a>
+            <a class="gitlink" href="https://github.com/EvgheniiGulinsky" target="_blank"><img src="./Movie Search_files/GitHub-Mark-Light-32px.png" alt="" srcset=""> My github page
+            </a>
+        </div>
+    </footer>
+    <script src="./Movie Search_files/jquery-3.5.1.js.Без названия" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./Movie Search_files/slick.min.js.Без названия"></script>
+    <script type="module" src="./Movie Search_files/index.js.Без названия"></script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>
