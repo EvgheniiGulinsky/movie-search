@@ -47,7 +47,7 @@ a:hover{
     text-align: center;
     margin-right: 10px;
 }
-.movie__name{
+.movie-name{
     overflow: hidden;
 	line-height: 20px;
     height: 40px;

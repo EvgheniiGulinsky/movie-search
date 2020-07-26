@@ -36,10 +36,8 @@ function sliderDestroy (){
 
 let currentPage = 2
 
-function sliderAdd (event){
-if (event.target.classList.contains("slick-disabled")){
-event.preventDefault()
-console.log(event.target)
+function sliderAdd (){
+if (document.querySelector('.slick-next').classList.contains("slick-disabled")){
 let currentQuery = document.querySelector(".form-control").value
 if(currentQuery=="")
 currentQuery = "dream"
@@ -48,27 +46,33 @@ fetch(`https://www.omdbapi.com/?apikey=107b2873&s=${currentQuery}&page=${current
   return response.json();
 })
 .then((data) => {
-  console.log(data)
-  let movies = data.Search
+  const movies = data.Search
+  console.log(movies)
   if (data.Response=="True"){
   movies.forEach(el=> {  
   let poster = "./assets/images.jpg"
   if(el.Poster!=="N/A")
   poster = el.Poster
-  let new_movie = document.createElement('div')
-  new_movie.className="movie item"
-  new_movie.innerHTML=`
-  <h5 class="movie__name">${el.Title}</h5>
+  const newMovie = document.createElement('div')
+  newMovie.className="movie item"
+  newMovie.innerHTML=`
+  <h5 class="movie-name">${el.Title}</h5>
   <img src=${poster}> 
-  <div class="movie__year">${el.Year}</div>
+  <div class="movie-year">${el.Year}</div>
   `;
-  sliderDestroy()
-  document.querySelector(".slides").appendChild(new_movie)
+  $('.slides').slick('slickAdd',newMovie);
+/*   sliderDestroy()
+  document.querySelector(".slides").appendChild(newMovie) */
  })
-  sliderCreate()
+/*   sliderCreate() */
   currentPage++
+  console.log(currentPage)
+  $('.slick-next').removeClass("slick-disabled")
+  $('.slick-next').on('click', sliderAdd )
   }
 })}}
  
 
 export {sliderCreate , sliderDestroy , sliderAdd}
+
+

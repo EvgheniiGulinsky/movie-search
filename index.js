@@ -1,5 +1,7 @@
-import {sliderCreate , sliderDestroy , sliderAdd} from "./slider.js";
+import {sliderCreate , sliderDestroy } from "./slider.js";
+import {translate} from "./translation.js";
 
+const startingQuery = 'https://www.omdbapi.com/?apikey=107b2873&s=dream'
 function request(url){
   fetch(url)
   .then((response) => {
@@ -9,66 +11,79 @@ function request(url){
     if (data.Response=="False"){
       alert(data.Error)
       searchForm.value  = ""
-      request('https://www.omdbapi.com/?apikey=107b2873&s=dream')
+      request(startingQuery)
     }
-    console.log(data);
-    document.querySelector(".slides").innerHTML=""
+    clearSlides()
     sliderFill(data)
-    spinner.style.display="none"
+    spinnerChange("none")
   });
 }
 
+function clearSlides(){
+  document.querySelector(".slides").innerHTML=""
+}
 
+function spinnerChange (state){
+  spinner.style.display = state
+}
 
-request('https://www.omdbapi.com/?apikey=107b2873&s=dream')
+request(startingQuery)
 
 
 
 
 
 function sliderFill (respond){
-  let movies = respond.Search
-  let ratingStar = document.createElement("img")
+  const noPoster ='N/A'
+  if (respond.Response!=="False"){
+  const movies = respond.Search
+  const ratingStar = document.createElement("img")
   ratingStar.src = "./assets/star.png"
   movies.forEach((el) => {
-    let movie = document.createElement("div")
+    const movie = document.createElement("div")
     movie.className = "movie"
     movie.classList.add("item")
-    let movie__name = document.createElement("h5")
-    movie__name.className = "movie__name"
-    movie__name.innerHTML=el.Title
-    let movie__poster = document.createElement("img")
-    if (el.Poster!== "N/A")
-    movie__poster.src = el.Poster
+    const movieName = document.createElement("h5")
+    movieName.className = "movie-name"
+    movieName.innerHTML=el.Title
+    const moviePoster = document.createElement("img")
+    if (el.Poster!== noPoster)
+    moviePoster.src = el.Poster
     else
-    movie__poster.src = "./assets/images.jpg"
-    let movie__year = document.createElement("div")
-    movie__year.innerHTML = el.Year
-    movie__year.className = "movie__year"
-    let movie__rating = document.createElement("div")
-    movie__rating.appendChild(ratingStar)
-    movie.appendChild(movie__name)
-    movie.appendChild(movie__poster)
-    movie.appendChild(movie__year)
+    moviePoster.src = "./assets/images.jpg"
+    const movieYear = document.createElement("div")
+    movieYear.innerHTML = el.Year
+    movieYear.className = "movie-year"
+    const movieRating = document.createElement("div")
+    movieRating.appendChild(ratingStar)
+    movie.appendChild(movieName)
+    movie.appendChild(moviePoster)
+    movie.appendChild(movieYear)
     document.querySelector(".slides").appendChild(movie)
-    
-  })
+    sliderCreate()
+  })}
+  else
+  sliderDestroy()
   sliderCreate()
 }
 
 
 
-let spinner = document.getElementById("spinner")
-let searchBtn = document.querySelector("#button-addon2")
-let searchForm = document.querySelector(".form-control")
-let inputClear = document.querySelector(".input__clear")
+const spinner = document.getElementById("spinner")
+const searchBtn = document.querySelector("#button-addon2")
+const searchForm = document.querySelector(".form-control")
+const inputClear = document.querySelector(".input__clear")
 
+let query = 'dream' 
 
 searchBtn.addEventListener("click", search )
 function search(){
+    spinnerChange("inline-block")
+    query = searchForm.value
     sliderDestroy ()
-    let query = searchForm.value
-    spinner.style.display="inline-block"
+    if (/[а-яА-Я]/i.test(query))
+    translate(searchForm.value, request)
+    else
     request(`https://www.omdbapi.com/?apikey=107b2873&s=${query}`)
 }
 
@@ -85,3 +100,4 @@ document.addEventListener("keydown", ()=>{
 })
 
 
+export {searchForm, request}
